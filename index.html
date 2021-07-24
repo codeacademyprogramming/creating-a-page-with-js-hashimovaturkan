@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .d-none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <script src="./index.js"></script> -->
+    <div class="something" id="some-id" title="some-title"></div>
+    <ul class="custom">
+      <li data-source="repository">Repository</li>
+      <li data-source="merge-requests">Merge requests</li>
+      <li data-source="issues">Issues</li>
+      <li data-source="monitor">Monitor</li>
+      <li data-source="deployment">Deployment</li>
+    </ul>
+    <div class="wrapper">
+      <ul data-target="repository" class="d-none">
+        <li>Files</li>
+        <li>Commits</li>
+        <li>Branches</li>
+      </ul>
+      <ul data-target="merge-requests" class="d-none">
+        Merge Requests Target
+      </ul>
+      <ul data-target="issues" class="d-none">
+        Issues Target
+      </ul>
+      <ul data-target="monitor" class="d-none">
+        Monitor Target
+      </ul>
+      <ul data-target="deployment" class="d-none">
+        Deployment Target
+      </ul>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
