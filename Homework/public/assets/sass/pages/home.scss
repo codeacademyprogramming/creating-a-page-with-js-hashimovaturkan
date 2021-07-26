@@ -1,0 +1,169 @@
+.content{
+    position: relative;
+    padding-left: 22.1rem;
+    padding-top: 4.4rem;
+    transition: all 0.5s;
+}
+.project{
+    padding: 0 1.6rem;
+    &__box{
+        margin: auto;
+    }
+    &__nav{ 
+        display: flex;
+        padding: 1.5rem 0;   
+        border-bottom: 0.1rem solid rgba(41,41,97,0.15);
+        align-items: center;
+    }
+    &__nav-item{
+        position: relative;
+        font-size: 1.2rem;
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        width: auto;
+        white-space: nowrap;
+        
+    }
+    &__nav-icon{
+        margin: 0 1rem;
+    }
+    &__nav-link{
+        color: $color-grey-dark-2;
+        &:hover{
+            text-decoration: underline;
+        }       
+    }
+
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+    &__main-title{
+        @include align-center;
+        justify-content: space-between;
+        
+    }
+    &__profile{
+        @include align-center;
+    }
+    &__profile-desc{
+        margin-left: 2rem;
+    }
+    &__name{
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+    &__buttons{
+        @include align-center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__nav-item{
+        &:not(:first-child){
+            margin-left: 1rem;
+        }
+    }
+    &__stats-item{
+        @include align-center;
+        color:$color-grey-dark-1;
+        padding: 1rem 0;
+    }
+    &__stats-item-name{
+        margin-left: 0.6rem;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__desc{
+        font-size: 1.55rem;
+    }
+
+    &__progress{
+        @include align-center;
+    }
+
+    &__show-nav{
+        @include align-center;
+        flex-wrap: wrap;
+        align-content:space-around;
+    }
+    &__show-li{
+        @include align-center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__show-li-add{
+        color:$color-grey-dark-1;
+        margin-left: 1rem;
+        &::after{
+            content: "/";
+            margin:0 1rem;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    &__details{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+        padding: 2rem;
+        border: 0.1rem solid rgba(41,41,97,0.2);
+        border-radius: 0.5rem;
+        
+    }
+    &__details-show{
+        @include align-center;
+        justify-content: space-between;
+    }
+    &__details-show-item{
+        @include align-center;
+    }
+    &__details-name{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 1rem;
+    }
+    &__details-logo{
+        width: 4rem;
+    }
+    &__details-link{
+        color: $color-grey-dark-1;
+        &:hover{
+            color: royalblue;
+            text-decoration: underline;
+        }
+    }
+    &__details-time{
+        color:rgba($color-grey-dark-2, 0.8);
+    }
+    &__dropdown-btn{
+        display: inline-block;
+        cursor: pointer;
+    }
+    &__details-copy{
+        @include align-center;
+    }
+    &__details-dropdown{
+        color:$color-grey-dark-2;
+        font-size: 1.3rem;
+        margin: 1rem;
+        margin-left: 5rem;
+        border-left: 0.3rem solid rgba($color-grey-dark-2, 0.3);
+        padding: 1rem;
+    }
+    &__details-dropdown-link{
+        color:$color-grey-dark-1;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+}
+

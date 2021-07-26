@@ -1,0 +1,73 @@
+.head{
+    position: fixed;
+    background-color: $color-blue-dark;
+    width: 100%;
+    z-index: 999;
+    &__box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__title{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    &__menu{
+        position: relative;
+    }
+
+    &__item{
+        @include align-center;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        &:hover{
+            border-radius: 0.4rem;
+            background-color: rgba($color-white, 0.2%);
+        }
+        &--dropdown-menu{
+            padding: 0.65rem 1rem;
+        }
+        &--dropdown-nav{
+            padding: 1.1rem 1rem;
+        }
+        &--logo{
+            margin-left: 0%;
+        }
+        &--profile{
+            margin-right: 0%;
+        }
+        &--search{
+            padding: 0%;
+            background-color: rgba($color-white, 0.2%);
+            border-radius: 0.3rem;
+        }
+    }
+    &__item-text{
+        margin-left: 1rem;
+        display: flex;
+        color: $color-white; 
+    }
+    &__nav-item{
+        @include align-center;
+    }
+    &__nav{
+        @include align-center;
+    }
+    &__search-place{
+        padding: 0.85rem 1rem;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        width: 28rem;
+        &::placeholder{
+            font-size: 1.4rem;
+            color: rgba($color-white, 0.6%);
+        }
+    }
+    
+    
+}

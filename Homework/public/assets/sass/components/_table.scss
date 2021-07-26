@@ -1,0 +1,35 @@
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 2rem 0;
+    &__head-data{
+        padding: 1rem 2rem;
+        background-color: rgba($color-grey-dark-2, 0.2);
+        
+    }
+    &__row{
+        border: 1px solid rgba($color-blue-dark, 0.2);
+    }
+    &__head{
+        text-align: left;
+        
+    }
+    &__data{
+        padding:1rem 2rem;
+        &--commit{
+            display:inline-block;
+            width:300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+    }
+    &__name{
+        color: $color-grey-dark-1;
+        margin-left: 1rem;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

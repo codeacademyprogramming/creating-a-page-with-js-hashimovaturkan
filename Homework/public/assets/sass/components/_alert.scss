@@ -1,0 +1,22 @@
+.alert{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: $color-pink-light;
+    
+    &__cross{
+    position: absolute;
+    cursor: pointer;
+    right: 5rem;
+    transform: rotate(45deg);
+    font-size: 2rem;
+    color: $color-grey-dark-1;
+    }
+    &--simple{
+        background-color: $color-white;
+    }
+    &__text{
+        flex-wrap: wrap;
+        margin-right: 5rem;
+    }
+}

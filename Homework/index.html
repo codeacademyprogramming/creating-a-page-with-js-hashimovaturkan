@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="It is GitLab">
+    <link rel="stylesheet" href="./public/assets/css/style.css">
+    <title>GitLab</title>
+</head>
+<body>
+    <!--proyekte 2 navbar yazmaq olar?-->
+    <header class="head">
+        <div class="container-fluid">
+            <div class="head__box">
+                <div class="head__title">
+                    <h1 class="head__logo">
+                        <a href="#" class="head__item head__item--logo">
+                            <svg width="24" height="24" class="tanuki-logo" viewBox="0 0 36 36">
+                                <path class="tanuki-shape tanuki-left-ear" fill="#e24329" d="M2 14l9.38 9v-9l-4-12.28c-.205-.632-1.176-.632-1.38 0z"></path>
+                                <path class="tanuki-shape tanuki-right-ear" fill="#e24329" d="M34 14l-9.38 9v-9l4-12.28c.205-.632 1.176-.632 1.38 0z"></path>
+                                <path class="tanuki-shape tanuki-nose" fill="#e24329" d="M18,34.38 3,14 33,14 Z"></path>
+                                <path class="tanuki-shape tanuki-left-eye" fill="#fc6d26" d="M18,34.38 11.38,14 2,14 6,25Z"></path>
+                                <path class="tanuki-shape tanuki-right-eye" fill="#fc6d26" d="M18,34.38 24.62,14 34,14 30,25Z"></path>
+                                <path class="tanuki-shape tanuki-left-cheek" fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z"></path>
+                                <path class="tanuki-shape tanuki-right-cheek" fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z"></path>
+                            </svg>
+                            <span class="head__item-text" id="head-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="55" height="14" viewBox="0 0 617 169"><path d="M315.26 2.97h-21.8l.1 162.5h88.3v-20.1h-66.5l-.1-142.4M465.89 136.95c-5.5 5.7-14.6 11.4-27 11.4-16.6 0-23.3-8.2-23.3-18.9 0-16.1 11.2-23.8 35-23.8 4.5 0 11.7.5 15.4 1.2v30.1h-.1m-22.6-98.5c-17.6 0-33.8 6.2-46.4 16.7l7.7 13.4c8.9-5.2 19.8-10.4 35.5-10.4 17.9 0 25.8 9.2 25.8 24.6v7.9c-3.5-.7-10.7-1.2-15.1-1.2-38.2 0-57.6 13.4-57.6 41.4 0 25.1 15.4 37.7 38.7 37.7 15.7 0 30.8-7.2 36-18.9l4 15.9h15.4v-83.2c-.1-26.3-11.5-43.9-44-43.9M557.63 149.1c-8.2 0-15.4-1-20.8-3.5V70.5c7.4-6.2 16.6-10.7 28.3-10.7 21.1 0 29.2 14.9 29.2 39 0 34.2-13.1 50.3-36.7 50.3m9.2-110.6c-19.5 0-30 13.3-30 13.3v-21l-.1-27.8h-21.3l.1 158.5c10.7 4.5 25.3 6.9 41.2 6.9 40.7 0 60.3-26 60.3-70.9-.1-35.5-18.2-59-50.2-59M77.9 20.6c19.3 0 31.8 6.4 39.9 12.9l9.4-16.3C114.5 6 97.3 0 78.9 0 32.5 0 0 28.3 0 85.4c0 59.8 35.1 83.1 75.2 83.1 20.1 0 37.2-4.7 48.4-9.4l-.5-63.9V75.1H63.6v20.1h38l.5 48.5c-5 2.5-13.6 4.5-25.3 4.5-32.2 0-53.8-20.3-53.8-63-.1-43.5 22.2-64.6 54.9-64.6M231.43 2.95h-21.3l.1 27.3v94.3c0 26.3 11.4 43.9 43.9 43.9 4.5 0 8.9-.4 13.1-1.2v-19.1c-3.1.5-6.4.7-9.9.7-17.9 0-25.8-9.2-25.8-24.6v-65h35.7v-17.8h-35.7l-.1-38.5M155.96 165.47h21.3v-124h-21.3v124M155.96 24.37h21.3V3.07h-21.3v21.3"></path></svg>
+                            </span>
+                        </a>
+                    </h1>
+                    <div class="head__menu">
+                        <a class="head__item head__item--dropdown-menu dropdown__toggle">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 32 32">
+                                <title>menu</title>
+                                <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+                            </svg>
+                            <span class="head__item-text">Menu</span>
+                        </a>
+                        <div class="dropdown dropdown--menu d-none" id="menu-dropdown">
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a href="" class="dropdown__link dropdown__link--hover dropdown__link--menu">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#292961" class="mx-3" width="16" height="16" viewBox="0 0 32 32">
+                                            <title>file-empty</title>
+                                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                        </svg>
+                                        <span class="drowdown__text">Projects</span>
+                                        <svg class="dropdown__arrow" version="1.1" fill="#292961" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                width="7" height="10" viewBox="0 0 103.536 103.536" style="enable-background:new 0 0 103.536 103.536;"
+                                                xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M0.65,91.928c1.221,2.701,3.881,4.3,6.665,4.3c1.006,0,2.029-0.209,3.006-0.65l88.917-40.195
+                                                        c2.688-1.216,4.381-3.925,4.295-6.873c-0.085-2.948-1.934-5.554-4.687-6.609L9.929,7.794C6.17,6.352,1.933,8.23,0.489,12.001
+                                                        c-1.447,3.769,0.438,7.995,4.207,9.44l72.569,27.834L4.299,82.255C0.62,83.92-1.012,88.249,0.65,91.928z"/>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="" class="dropdown__link dropdown__link--hover dropdown__link--menu">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#292961" class="mx-3" width="16" height="16" viewBox="0 0 32 32">
+                                            <title>file-empty</title>
+                                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                        </svg>
+                                        <span class="drowdown__text">Groups</span>
+                                        <svg class="dropdown__arrow" version="1.1" fill="#292961" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                width="7" height="10" viewBox="0 0 103.536 103.536" style="enable-background:new 0 0 103.536 103.536;"
+                                                xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M0.65,91.928c1.221,2.701,3.881,4.3,6.665,4.3c1.006,0,2.029-0.209,3.006-0.65l88.917-40.195
+                                                        c2.688-1.216,4.381-3.925,4.295-6.873c-0.085-2.948-1.934-5.554-4.687-6.609L9.929,7.794C6.17,6.352,1.933,8.23,0.489,12.001
+                                                        c-1.447,3.769,0.438,7.995,4.207,9.44l72.569,27.834L4.299,82.255C0.62,83.92-1.012,88.249,0.65,91.928z"/>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li> 
+                                <li class="dropdown__item">
+                                    <a href="" class="dropdown__link dropdown__link--hover dropdown__link--menu">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#292961" class="mx-3" width="16" height="16" viewBox="0 0 32 32">
+                                            <title>file-empty</title>
+                                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                        </svg>
+                                        <span class="drowdown__text">Milestones</span>
+                                        
+                                    </a>
+                                </li>     
+                                <li class="dropdown__item">
+                                    <a href="" class="dropdown__link dropdown__link--hover dropdown__link--menu">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#292961" class="mx-3" width="16" height="16" viewBox="0 0 32 32">
+                                            <title>file-empty</title>
+                                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                        </svg>
+                                        <span class="drowdown__text">Snippets</span>
+                                        
+                                    </a>
+                                </li>    
+                                <li class="dropdown__item">
+                                    <a href="" class="dropdown__link dropdown__link--hover dropdown__link--menu">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#292961" class="mx-3" width="16" height="16" viewBox="0 0 32 32">
+                                            <title>file-empty</title>
+                                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                        </svg>
+                                        <span class="drowdown__text">Activity</span>
+                                        
+                                    </a>
+                                </li>         
+                                <li class="dropdown__item">
+                                    <a href="" class="dropdown__link dropdown__link--hover dropdown__link--menu">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#292961" class="mx-3" width="16" height="16" viewBox="0 0 32 32">
+                                            <title>file-empty</title>
+                                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                        </svg>
+                                        <span class="drowdown__text">Activity</span>
+                                        
+                                    </a>
+                                </li>         
+                                <li class="dropdown__item">
+                                    <a href="" class="dropdown__link dropdown__link--hover dropdown__link--menu">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#292961" class="mx-3" width="16" height="16" viewBox="0 0 32 32">
+                                            <title>file-empty</title>
+                                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                        </svg>
+                                        <span class="drowdown__text">Activity</span>
+                                        
+                                    </a>
+                                </li>                                    
+                            </ul>
+                            <div class="dropdown__alt">
+                                <div class="dropdown__text"><strong>Frequently visited</strong></div>
+                                <div class="dropdown__text">Groups you visit often will appear here</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="head__navbar ">
+                    <ul class="head__nav">
+                        <li class="head__nav-item">
+                            <a  class="head__item head__item--dropdown-nav dropdown__toggle">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="white" width="12" height="12" viewBox="0 0 32 32">
+                                    <title>plus</title>
+                                    <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+                                </svg>
+                                <?xml version="1.0" encoding="utf-8"?><svg class="ms-3" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="7" height="7" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg>
+                            </a>
+                            <div class="dropdown dropdown--head d-none">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item"><h3 href="" class="dropdown__link dropdown__link--main ">This product</h3></li>
+                                    <li class="dropdown__item dropdown__item--bt"><a href="" class="dropdown__link dropdown__link--hover">New issues</a></li>
+                                    <li class="dropdown__item"><h3 href="" class="dropdown__link dropdown__link--main">GitLab</h3></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">New project/repository</a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">New group</a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">New snippet</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="head__nav-item" id="search">
+                            <div class="head__item head__item--search head__item--dropdown-nav ">
+                                <input type="text" class="head__search-place" placeholder="Search GitLab">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="mx-3" fill="white" viewBox="0 0 32 32">
+                                    <title>search</title>
+                                    <path d="M31.008 27.231l-7.58-6.447c-0.784-0.705-1.622-1.029-2.299-0.998 1.789-2.096 2.87-4.815 2.87-7.787 0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12c2.972 0 5.691-1.081 7.787-2.87-0.031 0.677 0.293 1.515 0.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007 0.23s0.997-2.903-0.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="head__nav-item">
+                            <a class="head__item head__item--dropdown-nav ">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="white" width="12" height="12" viewBox="0 0 32 32">
+                                    <title>file-empty</title>
+                                    <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                </svg>   
+                            </a>
+                        </li>
+                        <li class="head__nav-item">
+                            <a class="head__item head__item--dropdown-nav dropdown__toggle">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" viewBox="0 0 32 32">
+                                    <title>git</title>
+                                    <path d="M31.397 14.575l-13.972-13.971c-0.804-0.805-2.109-0.805-2.915 0l-3.246 3.246 2.443 2.443c0.392-0.187 0.83-0.293 1.293-0.293 1.657 0 3 1.343 3 3 0 0.463-0.105 0.902-0.293 1.293l3.999 3.999c0.392-0.187 0.83-0.293 1.293-0.293 1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3c0-0.463 0.105-0.902 0.293-1.293l-3.999-3.999c-0.095 0.046-0.193 0.086-0.293 0.121v8.343c1.165 0.412 2 1.522 2 2.829 0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.306 0.835-2.417 2-2.829v-8.343c-1.165-0.412-2-1.522-2-2.829 0-0.463 0.105-0.902 0.293-1.293l-2.443-2.443-9.247 9.246c-0.805 0.806-0.805 2.11 0 2.915l13.973 13.971c0.804 0.805 2.109 0.805 2.915 0l13.906-13.906c0.805-0.805 0.805-2.111-0-2.915z"></path>
+                                </svg>
+                                <?xml version="1.0" encoding="utf-8"?><svg class="ms-3" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="7" height="7" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg>
+                            </a>
+                            <div class="dropdown dropdown--head d-none">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item"><h3 href="" class="dropdown__link dropdown__link--main ">Merge Requests</h3></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Assigned to you <span class="dropdown__count">0</span></a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Review requests to you <span class="head__count">0</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="head__nav-item">
+                            <a class="head__item head__item--dropdown-nav">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="white" width="12" height="12" viewBox="0 0 32 32">
+                                    <title>checkmark</title>
+                                    <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="head__nav-item">
+                            <a class="head__item head__item--dropdown-nav dropdown__toggle">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" viewBox="0 0 32 32">
+                                    <title>question</title>
+                                    <path d="M14 22h4v4h-4zM22 8c1.105 0 2 0.895 2 2v6l-6 4h-4v-2l6-4v-2h-10v-4h12zM16 3c-3.472 0-6.737 1.352-9.192 3.808s-3.808 5.72-3.808 9.192c0 3.472 1.352 6.737 3.808 9.192s5.72 3.808 9.192 3.808c3.472 0 6.737-1.352 9.192-3.808s3.808-5.72 3.808-9.192c0-3.472-1.352-6.737-3.808-9.192s-5.72-3.808-9.192-3.808zM16 0v0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16z"></path>
+                                </svg>
+                                <?xml version="1.0" encoding="utf-8"?><svg class="ms-3" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="7" height="7" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg>
+                            </a>
+                            <div class="dropdown dropdown--head d-none">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">What's new</a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Help</a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Support</a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Community forum</a></li>
+                                    <li class="dropdown__item dropdown__item--bt"><a href="" class="dropdown__link dropdown__link--hover">Keyboard shortcut</a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Submit feedback</a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Contribute to GitLab</a></li>                                    
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Switch to GitLab Next</a></li>                  
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="head__nav-item">
+                            <a class="head__item head__item--profile head__item--dropdown-nav dropdown__toggle">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="white" width="12" height="12" viewBox="0 0 32 32">
+                                    <title>user</title>
+                                    <path d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z"></path>
+                                </svg>
+                                <?xml version="1.0" encoding="utf-8"?><svg class="ms-3" fill="white" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="7" height="7" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg>
+                            </a>
+                            <div class="dropdown dropdown--head d-none">
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item dropdown__item--bt"><a href="" class="dropdown__link dropdown__link--hover"><strong>hashimovaturkan</strong></a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Set Status</a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Edit profile</a></li>
+                                    <li class="dropdown__item dropdown__item--bt"><a href="" class="dropdown__link dropdown__link--hover">Preferences</a></li>
+                                    <li class="dropdown__item"><a href="" class="dropdown__link dropdown__link--hover">Sign out</a></li>                 
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <nav class="sidebar__navbar">
+            <ul class="sidebar__nav">
+                <li class="sidebar__nav-item">
+                    <a class="sidebar__item">
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>user</title>
+                            <path d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z"></path>
+                        </svg>
+                        <span class="sidebar__item-text sidebar__item-text--over" data-sidebar-text="text">npm-another-project-a49a310d696f2441</span>
+                    </a>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="project-info">
+                    <a class="sidebar__item" >
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>file-empty</title>
+                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Project Information</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="project-info" >
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="repository">
+                    <a class="sidebar__item" >
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>file-empty</title>
+                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Repository</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="repository">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="issues">
+                    <a  class="sidebar__item" >
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>checkmark</title>
+                            <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Issues</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="issues">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="merge">
+                    <a class="sidebar__item" >
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>git</title>
+                            <path d="M31.397 14.575l-13.972-13.971c-0.804-0.805-2.109-0.805-2.915 0l-3.246 3.246 2.443 2.443c0.392-0.187 0.83-0.293 1.293-0.293 1.657 0 3 1.343 3 3 0 0.463-0.105 0.902-0.293 1.293l3.999 3.999c0.392-0.187 0.83-0.293 1.293-0.293 1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3c0-0.463 0.105-0.902 0.293-1.293l-3.999-3.999c-0.095 0.046-0.193 0.086-0.293 0.121v8.343c1.165 0.412 2 1.522 2 2.829 0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.306 0.835-2.417 2-2.829v-8.343c-1.165-0.412-2-1.522-2-2.829 0-0.463 0.105-0.902 0.293-1.293l-2.443-2.443-9.247 9.246c-0.805 0.806-0.805 2.11 0 2.915l13.973 13.971c0.804 0.805 2.109 0.805 2.915 0l13.906-13.906c0.805-0.805 0.805-2.111-0-2.915z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Merge Requests</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="merge">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="requirement">
+                    <a class="sidebar__item" >
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>plus</title>
+                            <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Requirements</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="requirement">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="ci">
+                    <a class="sidebar__item" >
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>question</title>
+                            <path d="M14 22h4v4h-4zM22 8c1.105 0 2 0.895 2 2v6l-6 4h-4v-2l6-4v-2h-10v-4h12zM16 3c-3.472 0-6.737 1.352-9.192 3.808s-3.808 5.72-3.808 9.192c0 3.472 1.352 6.737 3.808 9.192s5.72 3.808 9.192 3.808c3.472 0 6.737-1.352 9.192-3.808s3.808-5.72 3.808-9.192c0-3.472-1.352-6.737-3.808-9.192s-5.72-3.808-9.192-3.808zM16 0v0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">CI/CD</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="ci">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="deployment">
+                    <a  class="sidebar__item" >
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>checkmark</title>
+                            <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Deployments</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="deployment">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="monitor">
+                    <a  class="sidebar__item" >
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>git</title>
+                            <path d="M31.397 14.575l-13.972-13.971c-0.804-0.805-2.109-0.805-2.915 0l-3.246 3.246 2.443 2.443c0.392-0.187 0.83-0.293 1.293-0.293 1.657 0 3 1.343 3 3 0 0.463-0.105 0.902-0.293 1.293l3.999 3.999c0.392-0.187 0.83-0.293 1.293-0.293 1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3c0-0.463 0.105-0.902 0.293-1.293l-3.999-3.999c-0.095 0.046-0.193 0.086-0.293 0.121v8.343c1.165 0.412 2 1.522 2 2.829 0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.306 0.835-2.417 2-2.829v-8.343c-1.165-0.412-2-1.522-2-2.829 0-0.463 0.105-0.902 0.293-1.293l-2.443-2.443-9.247 9.246c-0.805 0.806-0.805 2.11 0 2.915l13.973 13.971c0.804 0.805 2.109 0.805 2.915 0l13.906-13.906c0.805-0.805 0.805-2.111-0-2.915z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Monitor</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="monitor">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="registr">
+                    <a class="sidebar__item">
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>file-empty</title>
+                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Packages & Registries</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="registr">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="analitics">
+                    <a class="sidebar__item">
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>plus</title>
+                            <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Analytics</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="analitics">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="wiki">
+                    <a class="sidebar__item">
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>checkmark</title>
+                            <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Wiki</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="wiki">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__nav-item" data-sidebar-item="snippet">
+                    <a  class="sidebar__item" >
+                        <svg class="sidebar__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                            <title>file-empty</title>
+                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                        </svg>
+                        <span class="sidebar__item-text" data-sidebar-text="text">Snippets</span>
+                    </a>
+                    <ul class="sidebar__nav d-none" id="sidebar-dropdown" data-sidebar-dropdown="snippet">
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-4"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a class="sidebar__item sidebar__item--collapse" id="collapse" >
+                <span id="less" class="">
+                    <svg  class="sidebar__icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="16" height="16" viewBox="0 0 103.537 103.537" style="enable-background:new 0 0 103.537 103.537;"
+                        xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M103.048,12.002c-1.445-3.771-5.679-5.649-9.438-4.207L4.692,41.9c-2.753,1.055-4.603,3.662-4.688,6.609
+                                c-0.087,2.948,1.608,5.656,4.295,6.872l88.917,40.196c0.978,0.44,2,0.65,3.006,0.65c2.784,0,5.442-1.6,6.665-4.302
+                                c1.661-3.678,0.029-8.007-3.648-9.671L26.273,49.277l72.568-27.834C102.61,19.998,104.496,15.771,103.048,12.002z"/>
+                        </g>
+                    </g>
+                    </svg>
+                </span>
+                <span class="d-none" id="greater">
+                    <svg  class="sidebar__icon " version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="16" height="16" viewBox="0 0 103.536 103.536" style="enable-background:new 0 0 103.536 103.536;"
+                    xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M0.65,91.928c1.221,2.701,3.881,4.3,6.665,4.3c1.006,0,2.029-0.209,3.006-0.65l88.917-40.195
+                                c2.688-1.216,4.381-3.925,4.295-6.873c-0.085-2.948-1.934-5.554-4.687-6.609L9.929,7.794C6.17,6.352,1.933,8.23,0.489,12.001
+                                c-1.447,3.769,0.438,7.995,4.207,9.44l72.569,27.834L4.299,82.255C0.62,83.92-1.012,88.249,0.65,91.928z"/>
+                        </g>
+                    </g>
+                    </svg>
+                </span>
+                <span class="sidebar__item-text" data-sidebar-text="text">Collapse sidebar</span>
+            </a>
+        </nav>
+    </aside>
+    <div class="content">
+        <div class="alert" data-alert="warning">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32" class="mx-3" fill="#9e5400">
+                <title>warning</title>
+                <path d="M16 2.899l13.409 26.726h-26.819l13.409-26.726zM16 0c-0.69 0-1.379 0.465-1.903 1.395l-13.659 27.222c-1.046 1.86-0.156 3.383 1.978 3.383h27.166c2.134 0 3.025-1.522 1.978-3.383h0l-13.659-27.222c-0.523-0.93-1.213-1.395-1.903-1.395v0z"></path>
+                <path d="M18 26c0 1.105-0.895 2-2 2s-2-0.895-2-2c0-1.105 0.895-2 2-2s2 0.895 2 2z"></path>
+                <path d="M16 22c-1.105 0-2-0.895-2-2v-6c0-1.105 0.895-2 2-2s2 0.895 2 2v6c0 1.105-0.895 2-2 2z"></path>
+            </svg>
+            <span class="alert__text"> This project was scheduled for deletion, but failed with the following message: execution expired</span>
+            <a class="alert__cross" data-cross="warning">&#10010</a>
+        </div>
+        <section class="project">
+            <div class="container">
+                <div class="project__box">
+                    <div class="project__nav">
+                        <div class="project__nav-item"><a class="project__nav-link" href="#" >gitlab-qa-sandbox-group </a></div>
+                        <span class="project__nav-icon">&#62;</span>
+                        <div class="project__nav-item"><a class="project__nav-link" href="#">qa-test-2021-07-21-08-07-53-0fbfa8bfb3fc824e</a></div>
+                        <span class="project__nav-icon">&#62;</span>
+                        <div class="project__nav-item"><a class="project__nav-link" href="#">npm-another-project-a49a310d696f2441</a></div>
+                    </div>
+                    <main>
+                        <div class="project__main">
+                            <div class="project__main-title">
+                                <div class="project__profile">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32">
+                                        <title>user</title>
+                                        <path   d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z"></path>
+                                    </svg>
+                                    <div class="project__profile-desc">
+                                        <h1 class="project__name">npm-another-project-a49a310d696f2441</h1>
+                                        <div class="project__id">Project ID: 28288017</div>
+                                    </div>
+                                </div> 
+                                <div class="project__buttons">
+                                    <a href="" class="btn ms-0">
+                                        <svg class="mx-1" version="1.1" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="rgb(102,102,102)" viewBox="0 0 32 32">
+                                            <title>bell</title>
+                                            <path d="M32.047 25c0-9-8-7-8-14 0-0.58-0.056-1.076-0.158-1.498-0.526-3.532-2.88-6.366-5.93-7.23 0.027-0.123 0.041-0.251 0.041-0.382 0-1.040-0.9-1.891-2-1.891s-2 0.851-2 1.891c0 0.131 0.014 0.258 0.041 0.382-3.421 0.969-5.966 4.416-6.039 8.545-0.001 0.060-0.002 0.121-0.002 0.183 0 7-8 5-8 14 0 2.382 5.331 4.375 12.468 4.878 0.673 1.263 2.002 2.122 3.532 2.122s2.86-0.86 3.532-2.122c7.137-0.503 12.468-2.495 12.468-4.878 0-0.007-0.001-0.014-0.001-0.021l0.048 0.021zM25.82 26.691c-1.695 0.452-3.692 0.777-5.837 0.958-0.178-2.044-1.893-3.648-3.984-3.648s-3.805 1.604-3.984 3.648c-2.144-0.18-4.142-0.506-5.837-0.958-2.332-0.622-3.447-1.318-3.855-1.691 0.408-0.372 1.523-1.068 3.855-1.691 2.712-0.724 6.199-1.122 9.82-1.122s7.109 0.398 9.82 1.122c2.332 0.622 3.447 1.318 3.855 1.691-0.408 0.372-1.523 1.068-3.855 1.691z"></path>
+                                        </svg>
+                                        <?xml version="1.0" encoding="utf-8"?><svg class="mx-1 ms-4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="rgb(102,102,102)" width="9" height="9" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg>
+                                    </a>
+                                    <a  class="btn btn--right" id="star">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="13" height="13" viewBox="0 0 32 32">
+                                            <title>star-empty</title>
+                                            <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z"></path>
+                                        </svg>
+                                        <span class="btn__text" id="star-text">Star</span>
+                                        <a  class="btn btn--left" id="star-count">0</a>
+                                    </a>
+                                    <a href="" class="btn btn--right">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="13" height="13" viewBox="0 0 32 32">
+                                            <title>git</title>
+                                            <path d="M31.397 14.575l-13.972-13.971c-0.804-0.805-2.109-0.805-2.915 0l-3.246 3.246 2.443 2.443c0.392-0.187 0.83-0.293 1.293-0.293 1.657 0 3 1.343 3 3 0 0.463-0.105 0.902-0.293 1.293l3.999 3.999c0.392-0.187 0.83-0.293 1.293-0.293 1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3c0-0.463 0.105-0.902 0.293-1.293l-3.999-3.999c-0.095 0.046-0.193 0.086-0.293 0.121v8.343c1.165 0.412 2 1.522 2 2.829 0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.306 0.835-2.417 2-2.829v-8.343c-1.165-0.412-2-1.522-2-2.829 0-0.463 0.105-0.902 0.293-1.293l-2.443-2.443-9.247 9.246c-0.805 0.806-0.805 2.11 0 2.915l13.973 13.971c0.804 0.805 2.109 0.805 2.915 0l13.906-13.906c0.805-0.805 0.805-2.111-0-2.915z"></path>
+                                        </svg>
+                                        <span class="btn__text">Fork</span>
+                                        <a href="" class="btn btn--left">0</a>
+                                    </a>
+                                    
+                                </div>      
+                            </div>
+                            <ul class="project__stats">
+                                <li class="project__nav-item">
+                                    <a href="" class="project__stats-item">
+                                        <svg fill="#303030" version="1.1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32">
+                                            <title>pencil</title>
+                                            <path d="M27 0c2.761 0 5 2.239 5 5 0 1.126-0.372 2.164-1 3l-2 2-7-7 2-2c0.836-0.628 1.874-1 3-1zM2 23l-2 9 9-2 18.5-18.5-7-7-18.5 18.5zM22.362 11.362l-14 14-1.724-1.724 14-14 1.724 1.724z"></path>
+                                        </svg>
+                                        <span class="project__stats-item-name"><strong>1</strong> Commit</span>
+                                    </a>
+                                </li>
+                                <li class="project__nav-item">
+                                    <a href="" class="project__stats-item">
+                                        <svg fill="#303030" version="1.1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32">
+                                            <title>pencil</title>
+                                            <path d="M27 0c2.761 0 5 2.239 5 5 0 1.126-0.372 2.164-1 3l-2 2-7-7 2-2c0.836-0.628 1.874-1 3-1zM2 23l-2 9 9-2 18.5-18.5-7-7-18.5 18.5zM22.362 11.362l-14 14-1.724-1.724 14-14 1.724 1.724z"></path>
+                                        </svg>
+                                        <span class="project__stats-item-name"><strong>1</strong> Branch</span>
+                                    </a>
+                                </li>
+                                <li class="project__nav-item">
+                                    <a href="" class="project__stats-item">
+                                        <svg fill="#303030" version="1.1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32">
+                                            <title>pencil</title>
+                                            <path d="M27 0c2.761 0 5 2.239 5 5 0 1.126-0.372 2.164-1 3l-2 2-7-7 2-2c0.836-0.628 1.874-1 3-1zM2 23l-2 9 9-2 18.5-18.5-7-7-18.5 18.5zM22.362 11.362l-14 14-1.724-1.724 14-14 1.724 1.724z"></path>
+                                        </svg>
+                                        <span class="project__stats-item-name"><strong>0</strong> Tags</span>
+                                    </a>
+                                </li>
+                                <li class="project__nav-item">
+                                    <a href="" class="project__stats-item">
+                                        <svg fill="#303030" version="1.1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32">
+                                            <title>pencil</title>
+                                            <path d="M27 0c2.761 0 5 2.239 5 5 0 1.126-0.372 2.164-1 3l-2 2-7-7 2-2c0.836-0.628 1.874-1 3-1zM2 23l-2 9 9-2 18.5-18.5-7-7-18.5 18.5zM22.362 11.362l-14 14-1.724-1.724 14-14 1.724 1.724z"></path>
+                                        </svg>
+                                        <span class="project__stats-item-name"><strong>174 KB</strong> Files</span>
+                                    </a>
+                                </li>
+                                <li class="project__nav-item">
+                                    <a href="" class="project__stats-item">
+                                        <svg fill="#303030" version="1.1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32">
+                                            <title>pencil</title>
+                                            <path d="M27 0c2.761 0 5 2.239 5 5 0 1.126-0.372 2.164-1 3l-2 2-7-7 2-2c0.836-0.628 1.874-1 3-1zM2 23l-2 9 9-2 18.5-18.5-7-7-18.5 18.5zM22.362 11.362l-14 14-1.724-1.724 14-14 1.724 1.724z"></path>
+                                        </svg>
+                                        <span class="project__stats-item-name"><strong>174 KB</strong> Storage</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="project__desc">
+                                My awesome project
+                            </div>
+                        </div>
+                        <div class="project__progress">
+                            <div class="progress-bar progress-bar--yellow">
+                                <div class="progress-bar__desc">
+                                    <span class="progress-bar__name">Javascript 84.9%</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar progress-bar--brown">
+                                <div class="progress-bar__desc">
+                                    <span class="progress-bar__name">Pug 7.1%</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar progress-bar--green">
+                                <div class="progress-bar__desc">
+                                    <span class="progress-bar__name">Dockerfile 5.2%</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar progress-bar--purple">
+                                <div class="progress-bar__desc">
+                                    <span class="progress-bar__name">Css 2.9%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert--simple">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32" class="mx-3" fill="#9e5400">
+                                <title>warning</title>
+                                <path d="M16 2.899l13.409 26.726h-26.819l13.409-26.726zM16 0c-0.69 0-1.379 0.465-1.903 1.395l-13.659 27.222c-1.046 1.86-0.156 3.383 1.978 3.383h27.166c2.134 0 3.025-1.522 1.978-3.383h0l-13.659-27.222c-0.523-0.93-1.213-1.395-1.903-1.395v0z"></path>
+                                <path d="M18 26c0 1.105-0.895 2-2 2s-2-0.895-2-2c0-1.105 0.895-2 2-2s2 0.895 2 2z"></path>
+                                <path d="M16 22c-1.105 0-2-0.895-2-2v-6c0-1.105 0.895-2 2-2s2 0.895 2 2v6c0 1.105-0.895 2-2 2z"></path>
+                            </svg>
+                            <span>  This project will be deleted on 2021-07-28 since its parent group 'qa-test-2021-07-21' has been scheduled for deletion.</span>
+                            
+                        </div>
+                        <div class="project__show">
+                            <ul class="project__show-nav">
+                                <li class="project__show-li">
+                                    <a href="" class="btn ms-0">
+                                        <span class="btn__text">master</span>
+                                        <?xml version="1.0" encoding="utf-8"?><svg class="mx-1 ms-5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="rgb(102,102,102)" width="9" height="9" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg>
+
+                                    </a>
+                                </li>
+                                <li class="project__show-li">
+                                    <a href="" class="project__show-li-add">npm-another-project-a49a310d696f2441</a>
+                                    <a href="" class="btn">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" style="margin: 0.5rem;" width="13" height="13" viewBox="0 0 32 32">
+                                            <title>plus</title>
+                                            <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+                                        </svg>
+                                        <?xml version="1.0" encoding="utf-8"?><svg class="mx-1 ms-3" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="rgb(102,102,102)" width="9" height="9" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg>
+                                    </a>
+                                </li>
+                                <li class="project__show-li">
+                                    <a href="" class="btn">
+                                        <span class="btn__text">History</span>
+                                    </a>
+                                </li>
+                                <li class="project__show-li">
+                                    <a href="" class="btn">
+                                        <span class="btn__text">Find file</span>
+                                    </a>
+                                </li>
+                                <li class="project__show-li">
+                                    <a href="" class="btn btn--right btn--right--large">
+                                        <span class="btn__text">Web IDE</span>
+                                        <a href="" class="btn btn--left btn--left--large">
+                                            <?xml version="1.0" encoding="utf-8"?><svg class="mx-1 ms-1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="rgb(102,102,102)" style="margin: 0.6rem;"  width="9" height="9" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg> 
+                                        </a>
+                                    </a>
+                                </li>
+                                <li class="project__show-li">
+                                    <a href="" class="btn">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="15" height="15" class="mx-2" style="margin: 0.3rem;" viewBox="0 0 32 32">
+                                            <title>download3</title>
+                                            <path d="M23 14l-8 8-8-8h5v-12h6v12zM15 22h-15v8h30v-8h-15zM28 26h-4v-2h4v2z"></path>
+                                        </svg>
+                                        <?xml version="1.0" encoding="utf-8"?><svg class="mx-1 ms-1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="rgb(102,102,102)" style="margin: 0.6rem;"  width="9" height="9" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg>           
+                                    </a>
+                                </li>
+                                <li class="project__show-li">
+                                    <a href="" class="btn btn--primary">
+                                        <span class="btn__text btn__text--primary">Clone</span>
+                                        <?xml version="1.0" encoding="utf-8"?><svg class="mx-1 ms-3" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="white" width="9" height="9" viewBox="0 0 122.88 80.593" enable-background="new 0 0 122.88 80.593" xml:space="preserve"><g><polygon points="122.88,0 122.88,30.82 61.44,80.593 0,30.82 0,0 61.44,49.772 122.88,0"/></g></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="project__details">
+                                <div class="project__details-show">
+                                    <div class="project__details-show-item">
+                                        <img class="project__details-logo" src="./public/assets/images/logo.png" alt="logo">
+                                        <div class="project__details-name">
+                                            <div >
+                                                <a href="" class="project__details-link">
+                                                    Initialized from 'NodeJS Express' project template
+                                                </a>
+                                                <button class="project__dropdown-btn btn"><strong>...</strong></button>
+                                            </div>
+                                            <span class="project__details-time">GitLab authored 5 months ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="project__details-copy">
+                                        <a  class="btn btn--right btn--right--large">
+                                            <span class="btn__text " id="copy-text">eaa48337</span>
+                                            <a id="copy-btn" class="btn btn--left btn--left--large cursor-pointer">
+                                                <svg class="mx-1 ms-1 m-1" fill="rgb(102,102,102)" version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+                                                    <title>copy</title>
+                                                    <path d="M20 8v-8h-14l-6 6v18h12v8h20v-24h-12zM6 2.828v3.172h-3.172l3.172-3.172zM2 22v-14h6v-6h10v6l-6 6v8h-10zM18 10.828v3.172h-3.172l3.172-3.172zM30 30h-16v-14h6v-6h10v20z"></path>
+                                                </svg>
+                                            </a>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="project__details-dropdown d-none">
+                                    <div>Template repository: <a href="" class="project__details-dropdown-link">https://gitlab.com/gitlab-org/project-templates/express</a></div>
+                                    <div>Commit SHA: 7494db9e8bca9bc0f514cac747389b0688351b12</div>
+                                </div>
+                            </div>
+                            <ul class="project__show-nav">
+                                <li class="project__show-li">
+                                    <a href="" class="btn ms-0">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="mx-3" width="16" height="16" fill="rgb(102,102,102)" viewBox="0 0 32 32">
+                                            <title>file-empty</title>
+                                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                        </svg>
+                                        <span class="btn__text">README</span>
+                                    </a>
+                                </li>
+                                <li class="project__show-li">
+                                    <a href="" class="btn ms-0 btn--block">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="mx-3" width="16" height="16" fill="rgb(102,102,102)" viewBox="0 0 32 32">
+                                            <title>file-empty</title>
+                                            <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+                                        </svg>
+                                        <span class="btn__text ">No license, All rights reserved</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <table class="table">
+                                <thead class="table__head">
+                                    <tr class="table__row">
+                                        <th class="table__head-data">Name</th>
+                                        <th class="table__head-data">Last Commit</th>
+                                        <th class="table__head-data">Last update</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table__body">
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__data table__data--name">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" fill="rgb(102,102,102)" width="18" height="18" viewBox="0 0 32 32">
+                                                <title>folder-open</title>
+                                                <path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
+                                            </svg>
+                                            <a href="" class="table__name">bin</a>
+                                        </td>
+                                        <td class="table__data table__data--commit">
+                                            Initialized from 'NodeJS Express' project template
+                                        </td>
+                                        <td class="table__data table__data--time">
+                                            5 months ago
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="./public/assets/js/main.js"></script>
+</body>
+</html>

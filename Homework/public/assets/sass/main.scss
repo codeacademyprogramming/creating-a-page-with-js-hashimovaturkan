@@ -1,0 +1,24 @@
+@import "./abstracts/functions";
+@import './abstracts/mixins';
+@import "./abstracts/variables";
+
+@import "./vendors/bootstrap/bootstrap-grid.scss";
+@import "./vendors/bootstrap/bootstrap-utilities.scss";
+
+@import "./base/base";
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/utilities";
+
+@import "./components/alert";
+@import "./components/button";
+@import "./components/progress";
+@import "./components/table";
+@import "./components/dropdown";
+
+@import "./layouts/header";
+@import "./layouts/sidebar";
+
+@import "./pages/home.scss";
+
+@import "./vendors-extensions/bootstrap/bootstrap";
