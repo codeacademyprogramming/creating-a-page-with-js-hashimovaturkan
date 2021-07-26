@@ -70,7 +70,7 @@ function myFunction(media) {
                 element.classList.toggle("d-none");
             })
             
-            if(collapseLess.classList.contains("d-none")){
+            if(collapseGreater.classList.contains("d-none")){
                 content.style.paddingLeft = "5rem";       
             }
         }
@@ -86,7 +86,7 @@ function myFunction(media) {
                 element.classList.toggle("d-none");
             })
             
-            if(collapseGreater.classList.contains("d-none")){
+            if(collapseLess.classList.contains("d-none")){
                 content.style.paddingLeft = "5rem";       
             }
             else{
