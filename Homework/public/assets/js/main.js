@@ -18,7 +18,6 @@ const alert = document.querySelector(".alert");
 alertCross.addEventListener('click', ()=>{
     alert.classList.add("d-none");
 })
-
 //mouse over ve click eyni anda nece olur
 //sidebar-dropdown
 const sidebarDropdown = Array.from(document.querySelectorAll("#sidebar-dropdown"));
