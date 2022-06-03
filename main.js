@@ -14,6 +14,16 @@ listItems.forEach(listItem => {
         unorderedLists.forEach(unorderedList => {
             unorderedList.classList.add('d-none');
         })
+
+        
     }
+
+    
 })
 
+
+<ul class="sidebar__nav sidebar__alt">
+                        <li class="sidebar__item px-5"><a href="" class="sidebar__item-text">Activity</a></li>
+                        <li class="sidebar__item px-5"><a href="" class="sidebar__item-text">Labels</a></li>
+                        <li class="sidebar__item px-5"><a href="" class="sidebar__item-text">Member</a></li>
+                    </ul>

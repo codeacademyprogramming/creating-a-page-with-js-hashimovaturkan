@@ -1,0 +1,114 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none; }
+
+body {
+  position: relative;
+  height: 150vh;
+  width: 100%;
+  background-color: #a4508b;
+  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%); }
+
+.plan {
+  width: 100%;
+  height: 100%; }
+  .plan__work {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  .plan__title {
+    margin: 20px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05); }
+  .plan__input {
+    border: none;
+    padding: 8px 60px;
+    font-size: 15px;
+    background-color: white;
+    display: inline-block;
+    margin: 5px; }
+    .plan__input--complete {
+      width: 100%;
+      margin: 0%;
+      text-decoration: none;
+      color: black; }
+  .plan__completed {
+    border: none;
+    padding: 8px 20px;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 196px;
+    background-color: #330647;
+    cursor: pointer; }
+  .plan__input-box {
+    display: inline-block;
+    position: relative; }
+  .plan__add {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 2px 10px;
+    background-color: #330647;
+    border-radius: 2px;
+    cursor: pointer; }
+  .plan__sign {
+    font-size: 15px;
+    display: inline-block;
+    transform: rotate(-90deg);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .plan__input-cancel {
+    display: inline-block;
+    position: absolute;
+    right: 53px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: black;
+    cursor: pointer; }
+  .plan__text-decoration {
+    text-decoration: line-through; }
+  .plan__bg {
+    background-color: #5f0a87;
+    border: blueviolet;
+    color: white; }
+  .plan__input-save {
+    border: none;
+    padding: 8px 20px;
+    display: inline-block;
+    background-color: #330647;
+    color: white;
+    cursor: pointer; }
+  .plan__save-box {
+    display: inline-block; }
+  .plan__save {
+    display: inline-block; }
+  .plan__list-new {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    top: 5px;
+    z-index: 1; }
+  .plan__list-box {
+    display: inline-block;
+    background-color: white; }
+  .plan__list-item {
+    width: 200px;
+    display: none; }
+  .plan__main {
+    width: 640px; }
+
+[data-current="current-mode"] {
+  display: inline-block; }

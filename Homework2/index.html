@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>To Do</title>
+</head>
+<body>
+    <section class="plan">
+        <div class="container">
+            <h1 class="plan__title">Turkan's ToDo List</h1>
+            <div class="plan__work">
+                <div class="plan__main">
+                    <div class="plan__save-box">
+                        <div class="plan__input-box">
+                            <input type="text" name="plan" id="plan-input" class="plan__input">
+                            <div class="plan__add"><span class="plan__sign">+</span></div>
+                            <div class="plan__input-cancel d-none">x</div>
+                        </div>
+                        <div class="plan__save">
+                            <!-- <div class="plan__input-save">Save</div> -->
+                        </div>
+                    </div>
+                    <div class="plan__list-box" >
+                        <ul class="plan__list-new">
+                            <li class="plan__list-item " data-current="current-mode"><a class="plan__input plan__input--complete">All</a></li>
+                            <li class="plan__list-item "><a class="plan__input plan__input--complete">Completed</a></li>
+                            <li class="plan__list-item "><a class="plan__input plan__input--complete">Uncompleted</a></li>
+                        </ul>
+                    </div>
+                    <div class="plan__completed"><span class="plan__sign">&#60;</span></div>
+                </div>
+                <ul class="list-group plan__list">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

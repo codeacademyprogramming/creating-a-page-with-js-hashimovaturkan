@@ -1,0 +1,80 @@
+.dropdown{
+    position: absolute;
+    border: 0.1rem solid rgba($color-blue-dark,0.1);
+    background-color: $color-white;
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 4px rgba($color-black,0.1);
+
+    &--head{
+        top: 100%;
+        margin: 1rem;
+        transform: translate(-80%,0);
+        
+    }
+    &__item{
+        &--bt{
+            border-bottom:  0.1rem solid rgba($color-blue-dark,0.2);
+        }
+    }
+    &__link{
+        position: relative;
+        white-space: nowrap;
+        display: inline-block;
+        padding: 1rem 0;
+        padding-left: 1rem;
+        padding-right: 7rem;
+        color: $color-grey-dark-2;
+        width: 100%;
+        &--main{
+            color: $color-grey-dark-1;
+            font-weight: 500;
+            font-size: 1.4rem;
+        }
+        &--hover{
+            &:hover{
+                background-color: rgba($color-blue-dark,0.08);
+            }
+        }
+        
+        &--menu{
+            color: $color-blue-dark;
+            padding-right: 12rem;
+            @include align-center;
+
+
+        }
+    }
+    &--menu{
+        top: 100%;
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+
+    }
+    &__count{
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        right: 10%;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: rgba(41,41,97,0.08);
+        
+    }
+    &__arrow{
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        right: 10%;
+    }
+    &__alt{
+        padding: 1rem;
+    }
+    &__text{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        white-space:nowrap;
+    }
+
+}
